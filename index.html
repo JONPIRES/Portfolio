@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jon's Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/69f3ff07be.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="header paralax">
+      <div class="container">
+        <nav>
+          <img class="logo" src="./images/logo.png" alt="" />
+          <ul id="side-menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Software Engineer</p>
+          <h1>Hi, I'm <span>Jon</span></h1>
+        </div>
+      </div>
+    </div>
+    <!-- --------------ABOUT----------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./images/user.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="subtitle">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              nobis minima. Rerum distinctio nobis temporibus laudantium
+              perferendis maxime voluptatem illum.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Design Web/App Interfaces</li>
+                <li>
+                  <span>Web Development</span><br />Design Web/App Interfaces
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>02/2023 - 05/2023 </span><br />
+                  Fellow At General Assembly
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="./images/work-1.png" alt="work-1" />
+            <div class="layer">
+              <h3>Memory Game</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit, vel?
+              </p>
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+              <a id="btn" href="">See More</a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/work-2.png" alt="work-2" />
+            <div class="layer">
+              <h3>Memory Game</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit, vel?
+              </p>
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+              <a id="btn" href="">See More</a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/work-3.png" alt="work-3" />
+            <div class="layer">
+              <h3>Memory Game</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit, vel?
+              </p>
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+              <a id="btn" href="">See More</a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/work-3.png" alt="work-3" />
+            <div class="layer">
+              <h3>Memory Game</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit, vel?
+              </p>
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+              <a id="btn" href="">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>jonbpires@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone-flip"></i>(978)399-4889</p>
+            <div class="social-icons">
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a class="btn btn2" href="./images/my-cv.pdf" download=""
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required />
+              <textarea
+                name="message"
+                id=""
+                placeholder="Your Message"
+                rows="6"></textarea>
+              <button class="btn2 submit" type="submit">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Created by Jonathan Pires 2023 ©</p>
+      </div>
+    </div>
+
+    <script>
+      const tabLinks = document.querySelectorAll(".tab-links");
+      const tabContents = document.querySelectorAll(".tab-contents");
+      const sideMenu = document.getElementById("side-menu");
+
+      function openTab(tabName) {
+        for (tablink of tabLinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+
+      function openMenu() {
+        sideMenu.style.right = "0";
+      }
+
+      function closeMenu() {
+        sideMenu.style.right = "-200px";
+      }
+
+      // Paralax effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementsByClassName("header");
+        let scrollPosition = window.pageYOffset;
+        header.style.backgroundPositionY = scrollPosition * 0.7 + "px";
+      });
+
+      //hour 1:42
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxLdiWy6e8Q7PTpcWotLg25e3MEGgqJsr47lvkk65r1cjfMf_sxoBepKon5Fmbiq1FoVQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(() => {
+              msg.innerHTML = "";
+            }, 2000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
