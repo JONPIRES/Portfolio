@@ -175,7 +175,7 @@ span {
 }
 
 .work img {
-  height: 300px;
+  width: 100%;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
@@ -339,7 +339,8 @@ nav .fa-solid {
 
 @media only screen and (max-width: 600px) {
   .header {
-    background-image: url(./images/phone-background.png);
+    background-image: url(./images/BackGround.png);
+    background-position: right;
   }
   .header-text {
     margin-top: 100%;
