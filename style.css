@@ -342,9 +342,9 @@ nav .fa-solid {
 }
 
 @media (max-width: 600px) {
-  /* .parallax {
+  .parallax {
     background-attachment: scroll;
-  } */
+  }
   .header-text {
     margin-top: 100%;
     font-size: 16px;
