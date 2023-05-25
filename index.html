@@ -12,7 +12,7 @@
       crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="header paralax">
+    <div class="header parallax" id="parallax-header">
       <div class="container">
         <nav>
           <img class="logo" src="./images/logo.png" alt="" />
@@ -228,11 +228,31 @@
         sideMenu.style.right = "-200px";
       }
 
-      // Paralax effect
-      window.addEventListener("scroll", function () {
-        const header = document.getElementsByClassName("header");
-        let scrollPosition = window.pageYOffset;
-        header.style.backgroundPositionY = scrollPosition * 0.7 + "px";
+      const parallaxHeader = document.getElementById("parallax-header");
+
+      function updateParallax() {
+        const scrollPosition = window.pageYOffset;
+        parallaxHeader.style.backgroundPositionY = scrollPosition * 0.7 + "px";
+      }
+
+      // Parallax effect on scroll
+      window.addEventListener("scroll", updateParallax);
+
+      // Parallax effect on touch move
+      let touchStartY = 0;
+
+      window.addEventListener("touchstart", (e) => {
+        touchStartY = e.touches[0].clientY;
+      });
+
+      window.addEventListener("touchmove", (e) => {
+        const touchCurrentY = e.touches[0].clientY;
+        const deltaY = touchCurrentY - touchStartY;
+        touchStartY = touchCurrentY;
+
+        const scrollPosition = window.pageYOffset;
+        parallaxHeader.style.backgroundPositionY =
+          scrollPosition - deltaY * 0.7 + "px";
       });
 
       //hour 1:42
