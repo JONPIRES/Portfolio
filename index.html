@@ -228,15 +228,15 @@
         sideMenu.style.right = "-200px";
       }
 
-      const parallaxHeader = document.getElementById("parallax-header");
+      // const parallaxHeader = document.getElementById("parallax-header");
 
-      function updateParallax() {
-        const scrollPosition = window.pageYOffset;
-        parallaxHeader.style.backgroundPositionY = scrollPosition * 0.7 + "px";
-      }
+      // function updateParallax() {
+      //   const scrollPosition = window.pageYOffset;
+      // parallaxHeader.style.backgroundPositionY = scrollPosition * 0.7 + "px";
+      // }
 
       // Parallax effect on scroll
-      window.addEventListener("scroll", updateParallax);
+      // window.addEventListener("scroll", updateParallax);
 
       // Parallax effect on touch move
       let touchStartY = 0;
@@ -250,9 +250,9 @@
         const deltaY = touchCurrentY - touchStartY;
         touchStartY = touchCurrentY;
 
-        const scrollPosition = window.pageYOffset;
-        parallaxHeader.style.backgroundPositionY =
-          scrollPosition - deltaY * 0.7 + "px";
+        // const scrollPosition = window.pageYOffset;
+        // parallaxHeader.style.backgroundPositionY =
+        //   scrollPosition - deltaY * 0.7 + "px";
       });
 
       //hour 1:42
