@@ -250,9 +250,9 @@
         const deltaY = touchCurrentY - touchStartY;
         touchStartY = touchCurrentY;
 
-        // const scrollPosition = window.pageYOffset;
-        // parallaxHeader.style.backgroundPositionY =
-        //   scrollPosition - deltaY * 0.7 + "px";
+        const scrollPosition = window.pageYOffset;
+        parallaxHeader.style.backgroundPositionY =
+          scrollPosition - deltaY * 0.7 + "px";
       });
 
       //hour 1:42
