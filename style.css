@@ -326,6 +326,10 @@ form .btn2 {
   cursor: pointer;
 }
 
+::placeholder {
+  padding-left: 10px;
+}
+
 .copyright {
   width: 100%;
   text-align: center;
