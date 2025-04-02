@@ -17,6 +17,7 @@ body {
   height: 100vh;
   background-image: url(./images/background.jpg);
   background-size: cover;
+  /* background-color: #959592; */
   /* background-position: center center; */
   background-attachment: fixed;
   padding: 100px 0;
