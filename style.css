@@ -8,19 +8,19 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #080808;
-  color: #fff;
+  background: #adadad;
+  color: #ffffff;
 }
 
 .header {
   width: 100%;
   height: 100vh;
-  background-image: url(./images/background.jpg);
+  background-image: url(./images/background1.jpeg);
   background-size: cover;
   /* background-color: #959592; */
   /* background-position: center center; */
   background-attachment: fixed;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .parallax {
   background-repeat: no-repeat;
@@ -36,12 +36,18 @@ body {
 
 nav {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 }
 
 .logo {
   width: 300px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 2rem;
 }
 
 nav ul li {
@@ -51,7 +57,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   position: relative;
@@ -61,7 +67,7 @@ nav ul li a::after {
   content: "";
   width: 0%;
   height: 3px;
-  background: #40d6c4;
+  background: #ab5000;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -73,7 +79,12 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-  margin-top: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
   font-size: 30px;
 }
 
@@ -83,14 +94,14 @@ nav ul li a:hover::after {
 }
 
 span {
-  color: #40d6c4;
+  color: #ab5000;
 }
 
 /* ---------ABOUT------------ */
 
 #about {
   padding: 80px 0;
-  color: #ababab;
+  color: #000000;
 }
 
 .row {
@@ -131,7 +142,7 @@ span {
   content: "";
   width: 0%;
   height: 3px;
-  background: #40d6c4;
+  background: #ab5000;
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -147,7 +158,7 @@ span {
   margin: 10px 0;
 }
 .tab-contents ul li span {
-  color: #40d6c4;
+  color: #ab5000;
   font-size: 14px;
 }
 
@@ -189,7 +200,7 @@ span {
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ffb145);
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -212,7 +223,7 @@ span {
 
 .layer a {
   margin-top: 20px;
-  color: #40d6c4;
+  color: #ab5000;
   text-decoration: none;
   font-size: 18px;
   line-height: 60px;
@@ -236,16 +247,16 @@ span {
   align-items: center;
   /* margin: 50px auto; */
   width: fit-content;
-  border: 1px solid #40d6c4;
+  border: 1px solid #ab5000;
   padding: 5px 20px;
   border-radius: 6px;
   text-decoration: none;
-  color: #40d6c4;
+  color: #ab5000;
   transition: background 0.5s;
 }
 
 #btn:hover {
-  background: #40d6c4;
+  background: #ab5000;
   color: #ffffff;
 }
 
@@ -264,7 +275,7 @@ span {
 }
 
 .contact-left p i {
-  color: #ff004f;
+  color: #ab5000;
   margin-right: 15px;
   font-size: 25px;
 }
@@ -283,7 +294,7 @@ span {
 }
 
 .social-icons a:hover {
-  color: #ff004f;
+  color: #ab5000;
   transform: translateY(-5px);
 }
 
@@ -294,9 +305,9 @@ span {
 .btn2 {
   margin: 50px 0;
   text-decoration: none;
-  border: 1px solid #ff004f;
+  border: 1px solid #ab5000;
   padding: 15px 20px;
-  color: #ff004f;
+  color: #ab5000;
   background-color: #000000;
 }
 
